@@ -19,7 +19,7 @@ const PlanetsSlider = props => {
       <h1 className="planets-slider-header">PLANETS</h1>
       <Slider {...sliderProps}>
         {planetsList.map(planetsListItem => (
-          <PlanetItem itemData={planetsListItem} />
+          <PlanetItem key={planetsListItem.id} itemData={planetsListItem} />
         ))}
       </Slider>
     </div>
