@@ -12,6 +12,7 @@ const PlanetsSlider = props => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    swipeToSlide: true,
   }
 
   return (
@@ -19,7 +20,9 @@ const PlanetsSlider = props => {
       <h1 className="planets-slider-header">PLANETS</h1>
       <Slider {...sliderProps}>
         {planetsList.map(planetsListItem => (
-          <PlanetItem key={planetsListItem.id} itemData={planetsListItem} />
+          <div key={planetsListItem.id}>
+            <PlanetItem itemData={planetsListItem} />
+          </div>
         ))}
       </Slider>
     </div>
